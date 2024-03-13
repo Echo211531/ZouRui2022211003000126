@@ -60,7 +60,7 @@
 <div class="container">
     <div class="form">
         <h2>New User Registration</h2>
-        <form action="151212" method="post">
+        <form action="register" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
@@ -73,8 +73,8 @@
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
             <br>
-            <label for="birthdate">Birthdate (yyyy-mm-dd hh):</label>
-            <input type="text" id="birthdate" name="birthdate" placeholder="e.g., 1990-01-01 12" required>
+            <label for="birthdate">Birthdate (yyyy-mm-dd):</label>
+            <input type="text" id="birthdate" name="birthdate" placeholder="e.g., 1990-01-01" required>
             <br>
             <button type="submit">Register</button>
         </form>

@@ -1,4 +1,4 @@
-package com.zourui.week2.homework;
+package com.zourui.week3.demo;
 
 import jakarta.servlet.http.*;
 import jakarta.servlet.http.HttpServlet;
