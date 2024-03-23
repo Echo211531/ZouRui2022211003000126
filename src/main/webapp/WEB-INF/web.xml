@@ -12,7 +12,7 @@
 		<servlet-name>anyName</servlet-name>
 		<url-pattern>/151212</url-pattern>
 	</servlet-mapping>
-<-->
+
 	<servlet>
 		<servlet-name>RegisterServlet</servlet-name>
 		<servlet-class>com.zourui.week3.demo.RegisterServlet</servlet-class>
@@ -30,5 +30,55 @@
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<url-pattern>/life</url-pattern>
 	</servlet-mapping>
+	<-->
+<!--	<servlet>-->
+<!--		<servlet-name>ConfigDemoServlet</servlet-name>-->
+<!--		<servlet-class>com.zourui.week4.demo.ConfigDemoServlet</servlet-class>-->
+<!--		<init-param>-->
+<!--			<param-name>driver</param-name>-->
+<!--			<param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>url</param-name>-->
+<!--			<param-value>jdbc:sqlserver://localhost;databaseName=userdb;</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>username</param-name>-->
+<!--			<param-value>root</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>password</param-name>-->
+<!--			<param-value>151212</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>name</param-name>-->
+<!--			<param-value>zourui</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<param-name>studentId</param-name>-->
+<!--			<param-value>2022211003000126</param-value>-->
+<!--		</init-param>-->
+<!--		<load-on-startup>1</load-on-startup>-->
+<!--	</servlet>-->
+<!--	<servlet-mapping>-->
+<!--		<servlet-name>ConfigDemoServlet</servlet-name>-->
+<!--		<url-pattern>/config</url-pattern>-->
+<!--	</servlet-mapping>-->
+		<context-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</context-param>
+		<context-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/userdb</param-value>
+		</context-param>
+		<context-param>
+			<param-name>username</param-name>
+			<param-value>root</param-value>
+		</context-param>
+		<context-param>
+			<param-name>password</param-name>
+			<param-value>151212</param-value>
+		</context-param>
 
 </web-app>

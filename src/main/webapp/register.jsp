@@ -60,7 +60,7 @@
 <div class="container">
     <div class="form">
         <h2>New User Registration</h2>
-        <form action="register" method="post">
+        <form action="jdbc" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
