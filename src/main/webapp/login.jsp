@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: www21
-  Date: 2024/3/7
-  Time: 10:23
+  Date: 2024/3/28
+  Time: 18:17
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -59,24 +59,14 @@
 </style>
 <div class="container">
     <div class="form">
-        <h2>New User Registration</h2>
-        <form action="jdbc" method="post">
+        <h2>New User Login</h2>
+        <form action="login" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
             <br>
-            <label for="birthdate">Birthdate (yyyy-mm-dd):</label>
-            <input type="text" id="birthdate" name="birthdate" placeholder="e.g., 1990-01-01" required>
-            <br>
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
         </form>
     </div>
 </div>

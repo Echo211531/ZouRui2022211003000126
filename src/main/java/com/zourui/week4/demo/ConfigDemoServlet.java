@@ -63,7 +63,7 @@ public class ConfigDemoServlet extends HttpServlet{
         resp.getWriter().println("<br>name: "+name);
         resp.getWriter().println("<br>studentId: "+studentId);
 
-        resp.getWriter().println("<h2>Task 1-Get init parameters from @WebServlet</h2>");
+        resp.getWriter().println("<h2>Task 2-Get init parameters from @WebServlet</h2>");
         resp.getWriter().println("<br>name1: "+name);
         resp.getWriter().println("<br>studentId1: "+studentId);
     }

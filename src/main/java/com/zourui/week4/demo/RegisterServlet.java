@@ -44,17 +44,19 @@ public class RegisterServlet extends HttpServlet{
         String gender=req.getParameter("gender");
         String birthdate=req.getParameter("birthdate");
         String sql="insert into usertable(id,username,password,email,gender,birthdate) values(?,?,?,?,?,?)";
-        String sql2="select * from usertable";
-//        try {
-//            PreparedStatement preparedStatement = con.prepareStatement(sql);
-//            int i = preparedStatement.executeUpdate();
-//            PreparedStatement preparedStatement1 = con.prepareStatement(sql2);
-//            ResultSet resultSet = preparedStatement1.executeQuery();
-//            while(resultSet.next()){
-//            }
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            PreparedStatement preparedStatement = con.prepareStatement(sql);
+            preparedStatement.setString(1,"1");
+            preparedStatement.setString(2,username);
+            preparedStatement.setString(3,password);
+            preparedStatement.setString(4,email);
+            preparedStatement.setString(5,gender);
+            preparedStatement.setString(6,birthdate);
+            int i = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         resp.setContentType("text/html");
         // 获取输出流
         PrintWriter out = resp.getWriter();
