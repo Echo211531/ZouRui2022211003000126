@@ -29,7 +29,7 @@ public class LoginServlet extends HelloServlet {
 //        } catch (SQLException e) {
 //            throw new RuntimeException(e);
 //        }
-        con = (Connection) getServletContext().getAttribute("con"); //从应用域取出con连接
+         con = (Connection) getServletContext().getAttribute("con"); //从应用域取出con连接
     }
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
