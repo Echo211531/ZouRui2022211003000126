@@ -1,6 +1,6 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="header.jsp"%>
+<%@include file="WEB-INF/views/header.jsp"%>
 <h1>User List</h1>
 <table border=1 ></table>
     <tr>
@@ -26,4 +26,4 @@
 }
     %>
 </table>
-<%@include file="footer.jsp"%>
+<%@include file="WEB-INF/views/footer.jsp"%>

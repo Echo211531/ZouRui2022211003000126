@@ -16,7 +16,6 @@ import java.util.Date;
 @WebServlet("/jdbc")
 public class RegisterServlet extends HttpServlet{
     Connection con=null;
-
     @Override
     public void init() throws ServletException {
 //        ServletContext servletContext =this.getServletContext();

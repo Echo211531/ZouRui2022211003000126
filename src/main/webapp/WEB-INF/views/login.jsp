@@ -60,12 +60,35 @@
 <div class="container">
     <div class="form">
         <h2>New User Login</h2>
+        <%
+            if(!(request.getAttribute("message")==null)){
+                out.println(request.getAttribute("message"));
+            }
+        %>
+        <%
+            Cookie[] cookies = request.getCookies();  //接收后端cookie
+            String username="",password="",rememberMeval="";
+            if(cookies!=null){
+                for(Cookie c:cookies){
+                    if(c.getName().equals("cUsername")){
+                        username=c.getValue();
+                    }
+                    if(c.getName().equals("cPassword")){
+                        password=c.getValue();
+                    }
+                    if(c.getName().equals("cRememberMe")){
+                        rememberMeval=c.getValue();
+                    }
+                }
+            }
+        %>
         <form action="login" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="text" id="username" name="username" value="<%=username%>" required>
+            <label for="password" >Password:</label>
+            <input type="password" id="password" name="password" value="<%=password%>" required>
             <br>
+            <input type="checkbox" name="rememberMe" value="1" <%=rememberMeval.equals("1")?"checked":""%>checked/>RememberMe<br/>
             <button type="submit">Login</button>
         </form>
     </div>

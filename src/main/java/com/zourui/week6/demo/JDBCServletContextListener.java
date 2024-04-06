@@ -11,6 +11,7 @@ import java.sql.SQLException;
 
 @WebListener    //域监听器，初始化JDBC
 public class JDBCServletContextListener implements ServletContextListener {
+    Connection con=null;
     @Override
     public void contextInitialized(ServletContextEvent sce){
         ServletContext servletContext =sce.getServletContext();
@@ -19,11 +20,11 @@ public class JDBCServletContextListener implements ServletContextListener {
         String username=servletContext.getInitParameter("username");
         String password=servletContext.getInitParameter("password");
         try {
-            Connection con=null;
             Class<?> aClass = Class.forName(driver);
             con = DriverManager.getConnection(url, username, password);
             System.out.println("i am in contextInitialized()");
 //            System.out.println("--> "+con);
+            servletContext.setAttribute("con",con);
         } catch (ClassNotFoundException e ) {
             throw new RuntimeException(e);
         } catch (SQLException e) {
