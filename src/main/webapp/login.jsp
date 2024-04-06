@@ -7,12 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
-<%--<html>--%>
-<%--<meta charset="UTF-8">--%>
-<%--<head>--%>
-<%--    <title>User Login</title>--%>
-<%--</head>--%>
-<%--<body>--%>
+<%
+    if(!(request.getAttribute("message")==null)){  //如果message不为空
+        out.println(request.getAttribute("message"));
+    }
+
+%>
 <style>
     body {
         font-family: Arial, sans-serif;
